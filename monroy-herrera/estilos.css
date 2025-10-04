@@ -1,0 +1,192 @@
+/* -- ESTILOS GLOBALES Y RESET -- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%; /* Se ajusta de 100vh a 100% para evitar problemas de scroll en móviles */
+}
+
+/* -- ESTILOS DEL BODY (FONDO) -- */
+body {
+    min-height: 100vh; /* Se usa vh para garantizar que cubra toda la ventana */
+    background: url("https://cdn.pixabay.com/photo/2018/06/09/21/37/summer-thunder-storm-3465247_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* -- CONTENEDOR DE BÚSQUEDA -- */
+.search-container {
+    margin: 20px 0;
+    width: 90%;
+    max-width: 450px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos específicos del título del buscador */
+.search-container .titulo {
+    font-size: 1.5rem;
+    color: #333;
+    text-shadow: none;
+    margin-bottom: 8px;
+}
+
+/* -- ESTILOS DEL BUSCADOR -- */
+.search-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* MEJORAS DEL INPUT */
+.search-input {
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    flex-grow: 1;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Efecto al hacer Foco en el input (Mejora visual) */
+.search-input:focus {
+    border-color: #ffde00; /* Color amarillo Pokémon */
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+    outline: none;
+}
+
+/* MEJORAS DEL BOTÓN */
+.search-button {
+    padding: 10px 20px;
+    background-color: #fcc000; /* Amarillo Pokémon */
+    color: white;
+    border: 2px solid #e8e000;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+/* Efecto al pasar el mouse (hover) y presionar (active) */
+.search-button:hover {
+    background-color: #ffde00; /* Amarillo más brillante al pasar el mouse */
+}
+
+.search-button:active {
+    transform: scale(0.98); /* Pequeño "click" al presionar */
+}
+
+
+/* -- TARJETA PRINCIPAL (CARD) -- */
+.card {
+    border: none;
+    border-radius: 15px;
+    margin: 15px 0 30px 0;
+    width: 90%;
+    max-width: 350px;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilos para el título principal de la tarjeta */
+#cardTitle {
+    font-size: 2.5rem;
+    color: gold;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+/* TÍTULOS Y TEXTO */
+.titulo {
+    font-size: 2.0rem;
+    text-align: center;
+    color: #ffde00;
+    text-shadow: 1px 1px 3px #000;
+    margin-bottom: 8px;
+}
+
+.pokemon-name {
+    color: #007bff;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    margin: 8px 0;
+}
+
+/* IMAGEN DEL POKÉMON */
+.pokemon-display {
+    width: 100%;
+}
+
+.pokemon-img {
+    width: 80%;
+    height: auto;
+    max-height: 180px;
+    object-fit: contain;
+    margin: 10px auto;
+    display: block;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 0, 0.7));
+}
+
+/* MENSAJE DE ERROR/ÉXITO */
+.message-box {
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #fad7d4;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* --- Estilos para datos adicionales del Pokémon --- */
+#pokemon-stats {
+    margin-top: 15px;
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+}
+
+#pokemon-stats p {
+    margin: 5px 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+#pokemon-stats h3 {
+    margin-top: 15px;
+    color: #ffde00; /* Color dorado para el título */
+}
+
+#pokemon-abilities {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+#pokemon-abilities li {
+    text-transform: capitalize; /* Pone en mayúscula la primera letra */
+    margin-bottom: 5px;
+}
+
+/* --- Estilo para el footer --- */
+footer {
+    margin-top: 30px;
+    color: white;
+    text-align: center;
+}

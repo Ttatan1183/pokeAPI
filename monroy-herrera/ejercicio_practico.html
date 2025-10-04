@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex - Ejercicio Práctico</title>
+    <!-- Usaremos los mismos estilos mejorados -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <div class="search-container">
+        <h2 class="titulo">Buscador Pokédex Avanzado</h2>
+        <div class="search-actions">
+            <!-- Un solo campo para buscar por nombre o ID -->
+            <input type="text" id="inputPokemon" class="search-input" placeholder="Nombre o ID del Pokémon">
+            <button id="btnBuscar" class="search-button">Buscar</button>
+        </div>
+        <div id="statusMessage" class="message-box" style="display: none;"></div>
+    </div>
+
+    <!-- La tarjeta de resultados ahora tendrá más campos -->
+    <section class="card" id="pokemonCard" style="display: none;">
+        <h1 class="titulo" id="cardTitle"></h1>
+        <div class="pokemon-display">
+            <h2 id="result_name" class="pokemon-name"></h2>
+            <img class="pokemon-img" src="" id="result_img" alt="Pokémon">
+            
+            <!-- Nuevos campos para información adicional -->
+            <div id="pokemon-stats">
+                <p id="pokemon-id"></p>
+                <p id="pokemon-height"></p>
+                <p id="pokemon-weight"></p>
+                <h3>Habilidades:</h3>
+                <ul id="pokemon-abilities"></ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Ejercicio práctico realizado por: <strong>Jonathan David Monroy Herrera</strong></p>
+    </footer>
+
+    <!-- Necesitaremos un nuevo archivo JS para esta lógica -->
+    <script src="ejercicio_practico.js"></script>
+
+</body>
+</html>
